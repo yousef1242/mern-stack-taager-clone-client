@@ -5,11 +5,11 @@ export function middleware(req) {
   let url = req.url;
   if (
     verify &&
-    (url === "http://localhost:3001/login" ||
-      url === "http://localhost:3001/register" ||
-      url === "http://localhost:3001/")
+    (url === "https://mern-stack-taager-clone-client.vercel.app/login" ||
+      url === "https://mern-stack-taager-clone-client.vercel.app/register" ||
+      url === "https://mern-stack-taager-clone-client.vercel.app/")
   ) {
-    return NextResponse.redirect("http://localhost:3001/eg/products");
+    return NextResponse.redirect("https://mern-stack-taager-clone-client.vercel.app/eg/products");
   }
   if (
    !verify &&
@@ -17,9 +17,9 @@ export function middleware(req) {
       url.includes("/sa") ||
       url.includes("/ae"))
   ) {
-    return NextResponse.redirect("http://localhost:3001/login");
+    return NextResponse.redirect("https://mern-stack-taager-clone-client.vercel.app/login");
   }
-  if (!verify && url === "http://localhost:3001/") {
-    return NextResponse.redirect("http://localhost:3001/login");
+  if (!verify && url === "https://mern-stack-taager-clone-client.vercel.app/") {
+    return NextResponse.redirect("https://mern-stack-taager-clone-client.vercel.app/login");
   }
 }
