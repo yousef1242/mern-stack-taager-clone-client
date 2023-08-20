@@ -1,0 +1,19 @@
+.imgDiv img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.imgDiv {
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+}
+.addToCartBtn{
+    background-color: var(--green-color);
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px;
+    color: #fff;
+    border: 0;
+    outline: none;
+    margin-top: 15px;
+}

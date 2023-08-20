@@ -1,0 +1,38 @@
+.ordersPage {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  min-height: 100vh;
+}
+.ordersPage .orderHeader {
+  padding: 10px 0;
+  border-bottom: 1px solid #d9dbdf;
+}
+.ordersPage .orderBtns {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 3px;
+  color: black;
+  background: none;
+  padding: 5px 0;
+  border: 1px solid #d9dbdf;
+}
+.ordersPage .searchBtn {
+  width: 40%;
+  padding: 10px 0;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  background-color: var(--green-color);
+}
+.ordersPage .searchInput {
+  padding: 10px;
+  width: 100%;
+  border: solid 1px #d9dbdf;
+  border-radius: 5px;
+}
+.ordersPage .searchInput:focus {
+  border: 1px solid var(--green-color);
+  box-shadow: none;
+  outline: none;
+}

@@ -1,0 +1,42 @@
+.partNavbar {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  top: 77px;
+  box-shadow: 0px 11px 11px #efefef4f;
+  padding: 0;
+  z-index: 99;
+}
+.partNavbar .partNavLinks {
+  display: block;
+  padding: 5px;
+  color: #0f1933;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  font-size: 20px;
+  text-align: start;
+  width: 100%;
+}
+.partNavbar .dropDown div {
+  border: 0;
+  box-shadow: 0 0 10px #efefef;
+}
+.partNavbar .partNavLinks:hover {
+  background-color: #0f19330f;
+}
+.partNavbar .dropDownToogle {
+  height: 46px;
+  overflow: hidden;
+}
+.partNavbar .dropDownToogle::after {
+  margin-right: 10px;
+}
+@media screen and (max-width: 533px) {
+  .partNavbar .dropDownToogle {
+    font-size: 15px !important;
+  }
+  .partNavbar .partNavLinks {
+    font-size: 15px;
+  }
+}

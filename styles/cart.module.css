@@ -1,0 +1,26 @@
+.cartPage{
+    padding-top: 150px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+.cartPage .emptyCartLink{
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: var(--green-color);
+    border: 0;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.cartPage .continueOrder{
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    display: block;
+    background-color: var(--green-color);
+    color: #fff;
+    font-weight: 600;
+    border: 0;
+    margin-top: 30px;
+    width: 100%;
+}

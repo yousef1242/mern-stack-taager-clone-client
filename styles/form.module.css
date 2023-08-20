@@ -1,0 +1,49 @@
+.formDiv {
+  min-height: 100vh;
+}
+.formDiv .formContainer {
+  width: 400px !important;
+  padding: 50px;
+}
+.formContainer .formImageDiv {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.formDiv .formGroup {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.formDiv .formGroup input {
+  padding: 10px;
+  width: 100%;
+  border: solid 1px #d9dbdf;
+  border-radius: 3px;
+}
+.formDiv .telFormGroup input {
+  width: 100%;
+  border: solid 1px #d9dbdf;
+  border-radius: 3px;
+}
+.formDiv .telFormGroup input:focus,
+.formDiv .formGroup input:focus {
+  border: 1px solid var(--green-color);
+  box-shadow: none;
+  outline: none;
+}
+.formDiv .formBtn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: var(--green-color);
+  border: 0;
+  outline: none;
+  margin-top: 20px;
+}
+@media screen and (max-width: 401px) {
+  .formDiv .formContainer {
+    width: 100% !important;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+}

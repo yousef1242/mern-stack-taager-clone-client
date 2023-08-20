@@ -1,0 +1,54 @@
+.orderModelHeader button {
+  margin: 0 !important;
+}
+.orderModel{
+    padding-left: 0!important;
+}
+.orderModel .formGroup {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.orderModel .formGroup label {
+  width: 100%;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.orderModel .formGroup input {
+  padding: 10px;
+  width: 100%;
+  border: solid 1px #d9dbdf;
+  border-radius: 3px;
+}
+.orderModel .formGroup select {
+  padding: 10px;
+  width: 100%;
+  border: solid 1px #d9dbdf;
+  border-radius: 3px;
+}
+.orderModel .formGroup textarea {
+  resize: none;
+  width: 100%;
+  height: 114px;
+  padding: 10px;
+  width: 100%;
+  border: solid 1px #d9dbdf;
+  border-radius: 3px;
+}
+.orderModel .formGroup input:focus,
+.orderModel .formGroup select:focus,
+.orderModel .formGroup textarea:focus {
+  border: 1px solid var(--green-color);
+  box-shadow: none;
+  outline: none;
+}
+.orderModel .orderModelBtn{
+    padding: 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    border: 0;
+    background-color: var(--green-color);
+    color: #fff;
+    width: 100%;
+}

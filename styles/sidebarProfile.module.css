@@ -1,0 +1,24 @@
+.SidebarProfile {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  height: 300px;
+}
+.SidebarProfile .navLinks {
+  display: block;
+  padding: 5px;
+  color: #0f1933;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  font-size: 25px;
+  text-align: start;
+  width: 100%;
+}
+.SidebarProfile .navLinks svg {
+  margin-left: 10px;
+  color: var(--green-color);
+}
+.SidebarProfile .navLinks:hover {
+    color: #0f19337a;
+  }

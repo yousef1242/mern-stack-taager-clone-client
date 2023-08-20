@@ -1,0 +1,85 @@
+.navbar {
+  background-color: #fff;
+  position: fixed;
+  height: 77px;
+  width: 100%;
+  z-index: 999;
+}
+.navbar .navbarBrand {
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  color: var(--green-color);
+}
+.navbar .navbarCart {
+  color: #0f1933;
+  font-size: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+.navbar .navbarStore {
+  margin-right: 50px;
+  text-decoration: none;
+  color: #0f1933;
+  font-size: 25px;
+  transition: 0.3s;
+}
+.navbar .dropDown div {
+  border: 0;
+  box-shadow: 0 0 10px #efefef;
+}
+.navbar .navbarCart:hover,
+.navbar .navbarStore:hover {
+  color: var(--green-color);
+}
+.navbar .navLinks svg{
+  color: var(--green-color);
+}
+.navbar .navLinks {
+  display: block;
+  padding: 5px;
+  color: #0f1933;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  font-size: 20px;
+  text-align: start;
+  width: 100%;
+}
+.navbar .cartSpinner {
+  position: absolute;
+  right: -11px;
+  color: var(--green-color);
+  top: -9px;
+}
+.navbar .cartSpinner div {
+  height: 20px;
+  width: 20px;
+}
+.navbar .navLinks:hover {
+  background-color: #0f19330f;
+}
+.navbar .dropDownToogle {
+  display: flex;
+  align-items: center;
+}
+.navbar .dropDownToogle::after {
+  margin-right: 10px;
+}
+@media screen and (max-width: 533px) {
+  .navbar .navbarCart,
+  .navbar .navbarStore,
+  .navbar .dropDownToogle {
+    font-size: 15px !important;
+  }
+  .navbar .navbarBrand {
+    font-size: 20px;
+  }
+  .navbar .navLinks {
+    font-size: 15px;
+  }
+  .navbar .navbarStore {
+    margin-right: 30px;
+  }
+}

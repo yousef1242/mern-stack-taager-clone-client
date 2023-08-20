@@ -1,0 +1,15 @@
+.walletPage{
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+.walletPage .takeMoney{
+    background-color: var(--green-color);
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px;
+    color: #fff;
+    border: 0;
+    outline: none;
+    margin-top: 15px;
+}
