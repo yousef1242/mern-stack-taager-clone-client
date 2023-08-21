@@ -27,11 +27,11 @@ const MainNavbar = () => {
   const dispatch = useDispatch();
   const { auth } = useSelector((state) => state.auth);
   const { cart } = useSelector((state) => state.cart);
-  const { country } = useRouter().query;
+  const router = useRouter();
 
   // get cart length
   const getCartLength = async () => {
-    const { data } = await request.get(`/api/cart/get?country=${country}`, {
+    const { data } = await request.get(`/api/cart/get?country=${router.query.country}`, {
       headers: {
         Authorization: "bearer " + auth?.token,
       },
@@ -45,12 +45,12 @@ const MainNavbar = () => {
   return (
     <Navbar className={classes.navbar}>
       <Container>
-        <Link className={classes.navbarBrand} href={`/${country}/products`}>
+        <Link className={classes.navbarBrand} href={`/${router.query.country}/products`}>
           Taager.com
         </Link>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className={classes.navbarCart} href={`/${country}/cart`}>
+            <Link className={classes.navbarCart} href={`/${router.query.country}/cart`}>
               <span>
                 <FontAwesomeIcon icon={faBagShopping} />
               </span>
@@ -77,19 +77,19 @@ const MainNavbar = () => {
               <Dropdown.Menu>
                 <Link
                   className={`${classes.navLinks}`}
-                  href={`/${country}/profile`}
+                  href={`/${router.query.country}/profile`}
                 >
                   <FontAwesomeIcon icon={faUser} /> حسابي
                 </Link>
                 <Link
                   className={`${classes.navLinks}`}
-                  href={`/${country}/wallet`}
+                  href={`/${router.query.country}/wallet`}
                 >
                   <FontAwesomeIcon icon={faWallet} /> محفظتي
                 </Link>
                 <Link
                   className={`${classes.navLinks}`}
-                  href={`/${country}/orders`}
+                  href={`/${router.query.country}/orders`}
                 >
                   <FontAwesomeIcon icon={faBox} /> طلباتي
                 </Link>
@@ -97,9 +97,9 @@ const MainNavbar = () => {
                   onClick={() => {
                     dispatch(setAuth(null));
                     Cookies.remove("setUserInfoAfterLogin");
+                    router.push("/login")
                   }}
                   className={`${classes.navLinks}`}
-                  href={"/login"}
                 >
                   <FontAwesomeIcon icon={faArrowRightFromBracket} /> تسجيل خروج
                 </Link>
