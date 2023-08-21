@@ -19,7 +19,7 @@ import { useDispatch, useSelector } from "react-redux";
 import dynamic from "next/dynamic";
 import { setAuth } from "@/redux/authSlice";
 import Cookies from "js-cookie";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import request from "@/lib/request";
 import { setCart } from "@/redux/cartSlice";
 
@@ -27,7 +27,7 @@ const MainNavbar = () => {
   const dispatch = useDispatch();
   const { auth } = useSelector((state) => state.auth);
   const { cart } = useSelector((state) => state.cart);
-  const router = useRouter();
+  const router  = useRouter();
 
   // get cart length
   const getCartLength = async () => {
@@ -93,16 +93,17 @@ const MainNavbar = () => {
                 >
                   <FontAwesomeIcon icon={faBox} /> طلباتي
                 </Link>
-                <Link
+                <span
                   onClick={() => {
                     dispatch(setAuth(null));
                     Cookies.remove("setUserInfoAfterLogin");
                     router.push("/login")
                   }}
                   className={`${classes.navLinks}`}
+                  style={{cursor:"pointer"}}
                 >
                   <FontAwesomeIcon icon={faArrowRightFromBracket} /> تسجيل خروج
-                </Link>
+                </span>
               </Dropdown.Menu>
             </Dropdown>
           </Nav>
