@@ -40,7 +40,7 @@ const MainNavbar = () => {
   };
   useEffect(() => {
     getCartLength();
-  }, [counrouter.query.countrytry]);
+  }, [router.query.country]);
 
   return (
     <Navbar className={classes.navbar}>
