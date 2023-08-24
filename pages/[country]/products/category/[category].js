@@ -4,7 +4,7 @@ import classes from "../../../../styles/categories.module.css";
 import PartNavbar from "@/components/partNavbar/PartNavbar";
 import { useRouter } from "next/router";
 import request from "@/lib/request";
-import ProductsItem from "@/components/productItem/ProductsItem";
+import ProductsCardItems from "@/components/productsCardItem/ProductsCardItem";
 
 const Category = ({ products }) => {
   const router = useRouter();
@@ -25,7 +25,7 @@ const Category = ({ products }) => {
         <div className="container">
           <h3 className="mb-5">{router.query.category}</h3>
           {products.length > 0 ? (
-            <ProductsItem products={products} />
+            <ProductsCardItems products={products} />
           ) : (
             <h3 className="text-center fw-bold mt-5">
               {router.query.category} No Products for

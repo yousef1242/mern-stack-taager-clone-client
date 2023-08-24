@@ -9,8 +9,6 @@ import {
   faArrowRightFromBracket,
   faBagShopping,
   faBox,
-  faCartShopping,
-  faStore,
   faUser,
   faWallet,
 } from "@fortawesome/free-solid-svg-icons";

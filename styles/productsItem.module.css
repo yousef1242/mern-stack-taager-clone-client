@@ -6,14 +6,24 @@
 .imgDiv {
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
 }
-.addToCartBtn{
-    background-color: var(--green-color);
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    border-radius: 30px;
-    color: #fff;
-    border: 0;
-    outline: none;
-    margin-top: 15px;
+.addToCartBtn {
+  background-color: var(--green-color);
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  color: #fff;
+  border: 0;
+  outline: none;
+  margin-top: 15px!important;
+  margin: 0;
+}
+.slider button::before {
+  color: #000;
+}
+.slider button {
+  margin: 4px;
+}
+.slider .card {
+  height: 431px !important;
 }

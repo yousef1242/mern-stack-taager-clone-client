@@ -27,7 +27,11 @@ const Products = ({ products }) => {
         <meta name="description" content="biggest marketing website" />
       </Head>
       <MainNavbar />
-      <PartNavbar egLink={"/eg/products"} saLink={"/sa/products"} aeLink={"/ae/products"} />
+      <PartNavbar
+        egLink={"/eg/products"}
+        saLink={"/sa/products"}
+        aeLink={"/ae/products"}
+      />
       <main className={classes.homePage}>
         <div className="container">
           <Carousel>
@@ -47,35 +51,35 @@ const Products = ({ products }) => {
             </Carousel.Item>
           </Carousel>
           <div className="newest-products mt-5 mb-5">
-            <h3 className="mb-4">وصل حديثا</h3>
+            <h2 className="mb-4">وصل حديثا</h2>
             {products.length > 0 ? (
               <ProductsItem products={products?.slice(0, 5)} />
             ) : (
               <h3 className="text-center fw-bold mt-5">
-                No Products for {router.query.country}
+                لا توجد منتجات ل {router.query.country}
               </h3>
             )}
           </div>
-          {products.length > 0 && (
+          {products?.length > 0 && products?.filter((product) => product.category === "الكترونات").length > 0 ?(
             <div className="newest-products mb-5">
-              <h3 className="mb-4">الكترونيات</h3>
-                <ProductsItem
-                  products={products
-                    ?.filter((product) => product.category === "الكترونات")
-                    .slice(0, 5)}
-                />
+              <h2 className="mb-4">الكترونيات</h2>
+              <ProductsItem
+                products={products
+                  ?.filter((product) => product.category === "الكترونات")
+                  .slice(0, 5)}
+              />
             </div>
-          )}
-          {products.length > 0 && (
+          ) : ""}
+          {products?.length > 0 && products?.filter((product) => product.category === "ملابس").length > 0 ? (
             <div className="newest-products mb-5">
-              <h3 className="mb-4">ملابس</h3>
-                <ProductsItem
-                  products={products
-                    ?.filter((product) => product.category === "ملابس")
-                    .slice(0, 5)}
-                />
+              <h2 className="mb-4">ملابس</h2>
+              <ProductsItem
+                products={products
+                  ?.filter((product) => product.category === "ملابس")
+                  .slice(0, 5)}
+              />
             </div>
-          )}
+          ) : ""}
         </div>
       </main>
     </>

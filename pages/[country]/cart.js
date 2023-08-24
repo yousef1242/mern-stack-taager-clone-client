@@ -39,6 +39,7 @@ const Cart = ({ cart }) => {
       console.log(error.response.data.message);
     }
   };
+
   useEffect(() => {
     setCartItems(cart);
   }, [cart]);
@@ -50,6 +51,7 @@ const Cart = ({ cart }) => {
     );
     setTotalPrice(totalPrice);
   }, [cartItems]);
+
   useEffect(() => {
     const totalprofit = cartItems?.reduce(
       (sum, item) =>
@@ -57,7 +59,9 @@ const Cart = ({ cart }) => {
       0
     );
     setTotalProfit(totalprofit);
+  
   }, [cartItems]);
+
   return (
     <>
       <Head>
@@ -167,7 +171,7 @@ export async function getServerSideProps(context) {
   const jsonCookie = JSON.parse(parsedCookies.setUserInfoAfterLogin);
   const { data } = await request.get(`/api/cart/get?country=${country}`, {
     headers: {
-      Authorization: "bearer " + jsonCookie?.token,
+      Authorization: "bearer " +jsonCookie?.token,
     },
   });
   return {
