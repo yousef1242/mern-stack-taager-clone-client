@@ -8,9 +8,6 @@
   height: 400px;
   object-fit: cover;
 }
-.singleProductPage button {
-  background-color: var(--green-color) !important;
-}
 .singleProductPage .downloadImagesProduct {
   border: 0;
   outline: 0;

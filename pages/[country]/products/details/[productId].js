@@ -99,6 +99,7 @@ const SingleProduct = ({ product, relatedProducts }) => {
                     </Carousel>
                   </div>
                   <button
+                  style={{background:"var(--green-color)"}}
                     onClick={handleDownloadImagesProduct}
                     className={classes.downloadImagesProduct}
                   >

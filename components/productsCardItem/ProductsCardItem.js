@@ -39,7 +39,7 @@ const productsCardItem = ({ products }) => {
             key={product?._id}
             className="col col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
           >
-            <div className={`${classes.card} card h-100`}>
+            <div className={`${classes.card} card`}>
               <Link
                 href={`/${router.country}/products/details/${product?._id}`}
                 className={`${classes.imgDiv} card-image`}
@@ -48,6 +48,7 @@ const productsCardItem = ({ products }) => {
               </Link>
               <div className="card-body">
                 <Link
+                style={{height:"47px"}}
                   href={`/${router.country}/products/details/${product?._id}`}
                   className="fw-bold text-decoration-none text-black d-block mb-3 mb-4 h-25"
                 >

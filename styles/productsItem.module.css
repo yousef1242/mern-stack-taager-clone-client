@@ -1,6 +1,5 @@
 .imgDiv img {
   width: 100%;
-  height: 150px;
   object-fit: cover;
 }
 .imgDiv {
@@ -23,7 +22,4 @@
 }
 .slider button {
   margin: 4px;
-}
-.slider .card {
-  height: 431px !important;
 }

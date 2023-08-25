@@ -71,7 +71,7 @@ const ProductsItem = ({ products }) => {
         <Slider className={classes.slider} {...settings}>
           {products?.map((product) => (
             <div key={product?._id}>
-              <div className={`${classes.card} card ms-2 me-2 h-100`}>
+              <div className={`${classes.card} card ms-2 me-2`}>
                 <Link
                   href={`/${router.country}/products/details/${product?._id}`}
                   className={`${classes.imgDiv} card-image`}
@@ -80,8 +80,9 @@ const ProductsItem = ({ products }) => {
                 </Link>
                 <div className="card-body">
                   <Link
+                    style={{ height: "47px" }}
                     href={`/${router.country}/products/details/${product?._id}`}
-                    className="fw-bold text-decoration-none text-black d-block mb-4 h-25"
+                    className="fw-bold text-decoration-none text-black d-block mb-4"
                   >
                     {product?.name}
                   </Link>
